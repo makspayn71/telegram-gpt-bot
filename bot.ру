@@ -13,7 +13,7 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
         input=text
     )
 
-    answer = response.output[0].content[0].text
+    answer = response.output_text
     await update.message.reply_text(answer)
 
 app = ApplicationBuilder().token(os.environ["8688885611:AAFTAk83oj7PQKDrxzanpJu8ZDLgi_ZR-ek"]).build()
